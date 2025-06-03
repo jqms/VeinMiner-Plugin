@@ -1,0 +1,13 @@
+{
+  "uuid": "c625b424-69fb-4f0b-bcaf-2afc95d9e298",
+  "plugin_name": "VeinMiner",
+  "plugin_author": "xJqms",
+  "plugin_description": "My amazing plugin description that I forgot to change for some reason.",
+  "plugin_version": "1.0.0",
+  "game_version": "1.21.81",
+  "supported_game_version_ranges": [
+    "0.0.0-9.99.9"
+  ],
+  "runtime_version": 1,
+  "target_assembly": "VeinMiner.dll"
+}
