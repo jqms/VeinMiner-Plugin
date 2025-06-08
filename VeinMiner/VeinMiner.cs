@@ -1,7 +1,10 @@
+using System.Text.Json.Nodes;
 using OnixRuntime.Api;
 using OnixRuntime.Api.Entities;
 using OnixRuntime.Api.Maths;
 using OnixRuntime.Api.Rendering;
+using OnixRuntime.Api.UI;
+using OnixRuntime.Api.Utils;
 using OnixRuntime.Api.World;
 using OnixRuntime.Plugin;
 using VeinMiner.Helpers;
@@ -27,11 +30,11 @@ namespace VeinMiner {
         public VeinMiner(OnixPluginInitInfo initInfo) : base(initInfo) {
             DisablingShouldUnloadPlugin = false;
         }
-        
+
         protected override void OnLoaded() {
             Config = new VeinMinerConfig(PluginDisplayModule);
             Onix.Events.Player.BreakBlock += PlayerOnBreakBlock;
-            Onix.Events.Rendering.HudRender += RenderingOnHudRender;
+            Onix.Events.Rendering.HudRenderGame += RenderingOnHudRender;
             Onix.Events.LocalServer.Tick += LocalServerOnTick;
         }
         private void LocalServerOnTick() {
@@ -140,7 +143,7 @@ namespace VeinMiner {
 
         protected override void OnUnloaded() {
             Onix.Events.Player.BreakBlock -= PlayerOnBreakBlock;
-            Onix.Events.Rendering.HudRender -= RenderingOnHudRender;
+            Onix.Events.Rendering.HudRenderGame -= RenderingOnHudRender;
             Onix.Events.LocalServer.Tick -= LocalServerOnTick;
         }
     }
