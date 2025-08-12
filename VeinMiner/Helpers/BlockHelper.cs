@@ -32,6 +32,7 @@ public static class BlockHelper {
     }
 
     public static bool IsMatchingLeaves(string blockName, string logType) {
+        if (logType == "oak") return blockName.Contains("azalea") || blockName.Contains("oak_");
         return blockName == logType + "_leaves";
     }
 

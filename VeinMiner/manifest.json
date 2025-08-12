@@ -3,11 +3,11 @@
   "plugin_name": "VeinMiner",
   "plugin_author": "xJqms",
   "plugin_description": "Allows you to mine entire veins of ores with a single block break. Also works with trees.",
-  "plugin_version": "1.0.1",
+  "plugin_version": "1.0.2",
   "game_version": "1.21.81",
   "supported_game_version_ranges": [
     "0.0.0-9.99.9"
   ],
-  "runtime_version": 2,
+  "runtime_version": 3,
   "target_assembly": "VeinMiner.dll"
 }
